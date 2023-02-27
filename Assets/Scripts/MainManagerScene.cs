@@ -44,9 +44,9 @@ public class MainManagerScene : MonoBehaviour
     {
         if (m_Points > MainManager.Instance.bestScore)
         {
-            BestScoreText.text = "Best Score: " + MainManager.Instance.bestScoreName + " - " + MainManager.Instance.bestScore;
             MainManager.Instance.bestScore = m_Points;
             MainManager.Instance.bestScoreName = MainManager.Instance.currentPlayerName;
+            BestScoreText.text = "Best Score: " + MainManager.Instance.bestScoreName + " - " + MainManager.Instance.bestScore;
             MainManager.Instance.SaveScore();
         }
         if (!m_Started)
